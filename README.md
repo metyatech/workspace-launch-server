@@ -1,6 +1,6 @@
 # Classroom Live Sync Server
 
-このフォルダには、VS Code 拡張機能「Workspace Launch by Link」用のサーバー実装が入っています。このコードは npm パッケージ `@kodai-yamamoto-siw/workspace-launch-server` として配布することを想定しています。
+このフォルダには、VS Code 拡張機能「Workspace Launch by Link」用のサーバー実装が入っています。このコードは npm パッケージ `@metyatech/workspace-launch-server` として配布することを想定しています。
 
 提供するエンドポイント:
 - GET /manifest?ownerId&workspaceId&token
@@ -26,7 +26,7 @@
 npm パッケージとして利用する場合は、依存関係に追加します。
 
 ```powershell
-npm install @kodai-yamamoto-siw/workspace-launch-server
+npm install @metyatech/workspace-launch-server
 ```
 
 - テンプレートはプロジェクト直下ではなく、`.workspace-launch/templates/` に配置してください (学生が作業を開始すると `.workspace-launch/storage/` に保存され、次回以降はこちらが配布されます)。

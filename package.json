@@ -1,39 +1,39 @@
 {
-    "name": "@kodai-yamamoto-siw/workspace-launch-server",
-    "version": "0.1.0",
-    "description": "Backend server for Workspace Launch by Link assignments",
-    "license": "MIT",
-    "type": "commonjs",
-    "main": "./dist/server.js",
-    "types": "./dist/server.d.ts",
-    "files": [
-        "dist",
-        "templates",
-        "README.md"
-    ],
-    "bin": {
-        "workspace-launch-server": "./dist/workspace-launch-server"
-    },
-    "scripts": {
-        "build": "tsc -p tsconfig.json && node ./scripts/postbuild.cjs",
-        "prepare": "npm run build",
-        "dev": "tsx watch src/server.ts",
-        "start": "node ./dist/server.js"
-    },
-    "dependencies": {
-        "express": "^5.1.0"
-    },
-    "devDependencies": {
-        "@types/express": "^5.0.3",
-        "@types/node": "^24.6.0",
-        "tsx": "^4.20.6",
-        "typescript": "~5.9.2"
-    },
-    "engines": {
-        "node": ">=18.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Kodai-Yamamoto-SIW/workspace-launch-server"
-    }
+  "name": "@metyatech/workspace-launch-server",
+  "version": "0.1.0",
+  "description": "Backend server for Workspace Launch by Link assignments",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./dist/server.js",
+  "types": "./dist/server.d.ts",
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "bin": {
+    "workspace-launch-server": "./dist/workspace-launch-server"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node ./scripts/postbuild.cjs",
+    "prepare": "npm run build",
+    "dev": "tsx watch src/server.ts",
+    "start": "node ./dist/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.0",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.2"
+  },
+  "engines": {
+    "node": ">=18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metyatech/workspace-launch-server"
+  }
 }
