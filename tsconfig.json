@@ -1,26 +1,21 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "module": "commonjs",
-        "target": "ES2020",
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "resolveJsonModule": true,
-        "types": [
-            "node"
-        ],
-        "declaration": true,
-        "declarationMap": true,
-        "sourceMap": true
-    },
-    "include": [
-        "src/**/*.ts"
-    ],
-    "exclude": [
-        "dist"
-    ]
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist"]
 }

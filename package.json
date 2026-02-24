@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Backend server for Workspace Launch by Link assignments",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "main": "./dist/server.js",
   "types": "./dist/server.d.ts",
   "files": [
@@ -18,7 +18,13 @@
     "build": "tsc -p tsconfig.json && node ./scripts/postbuild.cjs",
     "prepare": "npm run build",
     "dev": "tsx watch src/server.ts",
-    "start": "node ./dist/server.js"
+    "start": "node ./dist/server.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "npm run check-format && npm run lint && npm run check-types && npm run test && npm run build"
   },
   "dependencies": {
     "express": "^5.1.0"
@@ -26,9 +32,14 @@
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.6.0",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "prettier": "^3.8.1",
     "tsx": "^4.20.6",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.56.1",
+    "vitest": "^4.0.18"
   },
   "overrides": {
     "qs": ">=6.14.2",

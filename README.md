@@ -3,15 +3,17 @@
 このフォルダには、VS Code 拡張機能「Workspace Launch by Link」用のサーバー実装が入っています。このコードは npm パッケージ `@metyatech/workspace-launch-server` として配布することを想定しています。
 
 提供するエンドポイント:
+
 - GET /manifest?ownerId&workspaceId&token
 - POST /event/fileSnapshot
 - POST /event/create
 - POST /event/delete
 - POST /event/rename
 - POST /event/heartbeat
-- GET /_events (監査用)
+- GET /\_events (監査用)
 
 ## コード構成 (TypeScript)
+
 - `server/src/server.ts` : Express アプリケーションの初期化とルーターの登録
 - `server/src/routes/manifest.ts` : マニフェスト関連のエンドポイント
 - `server/src/routes/events.ts` : ファイル操作に関するイベントエンドポイント
@@ -55,10 +57,12 @@ npm run build
 ```
 
 環境変数:
+
 - `PORT` (既定: 8787)
 - `STORAGE_ROOT` 受信した学生ごとの作業内容を保存するルート (既定: `./.workspace-launch/storage`)
 - `TEMPLATE_ROOT` 配布テンプレートのルート (既定: `.workspace-launch/templates` が存在しない場合はパッケージ同梱テンプレート)
 
 動作確認:
+
 - http://localhost:8787/manifest?ownerId=alice&workspaceId=demo
-- http://localhost:8787/_events
+- http://localhost:8787/\_events
