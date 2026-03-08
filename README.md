@@ -12,14 +12,14 @@
 - GET /_events (監査用)
 
 ## コード構成 (TypeScript)
-- `server/src/server.ts` : Express アプリケーションの初期化とルーターの登録
-- `server/src/routes/manifest.ts` : マニフェスト関連のエンドポイント
-- `server/src/routes/events.ts` : ファイル操作に関するイベントエンドポイント
-- `server/src/utils/storage.ts` : パスのサニタイズやディレクトリ操作のユーティリティ
-- `server/src/utils/manifest.ts` : テンプレートからマニフェストを組み立てるユーティリティ
-- `server/src/config.ts` : 設定値の解決 (ポート・テンプレート/ストレージパス)
+- `src/server.ts` : Express アプリケーションの初期化とルーターの登録
+- `src/routes/manifest.ts` : マニフェスト関連のエンドポイント
+- `src/routes/events.ts` : ファイル操作に関するイベントエンドポイント
+- `src/utils/storage.ts` : パスのサニタイズやディレクトリ操作のユーティリティ
+- `src/utils/manifest.ts` : テンプレートからマニフェストを組み立てるユーティリティ
+- `src/config.ts` : 設定値の解決 (ポート・テンプレート/ストレージパス)
 
-生成された JavaScript は `server/dist/` に出力され、ランタイムではそちらが使用されます。
+生成された JavaScript は `dist/` に出力され、ランタイムではそちらが使用されます。
 
 ## インストール
 
@@ -37,7 +37,6 @@ npm install @metyatech/workspace-launch-server
 ## ローカル開発 (パッケージ側)
 
 ```powershell
-cd server
 npm install
 npm run dev
 ```
@@ -62,3 +61,9 @@ npm run build
 動作確認:
 - http://localhost:8787/manifest?ownerId=alice&workspaceId=demo
 - http://localhost:8787/_events
+
+## 資料
+- [SECURITY.md](SECURITY.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [LICENSE](LICENSE)
+- [CHANGELOG.md](CHANGELOG.md)
